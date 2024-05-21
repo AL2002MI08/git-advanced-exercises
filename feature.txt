@@ -1,7 +1,10 @@
 `This file contains the main features of advanced JavaScript these include the following
 arrow functions
+polyfill
+compilers
 let and const 
 rest operator
 spread opearator
 classes
-transpiler`
+transpiler
+`
