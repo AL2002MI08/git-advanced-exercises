@@ -2,6 +2,8 @@
 arrow functions
 polyfill
 compilers
+eqwye98yqwe
+quwehiqwh
 let and const 
 rest operator
 spread opearator
