@@ -458,5 +458,26 @@ remote: Resolving deltas: 100% (22/22), completed with 3 local objects.
 To https://github.com/AL2002MI08/git-advanced-exercises.git
    cfe080d..8500270  main -> main
  ```
+# Challenge 6
+```bash
+PS C:\Users\alexa\Desktop\git-advanced> git add .
+PS C:\Users\alexa\Desktop\git-advanced> git commit -m "Added gitignore file"
+[main 7462516] Added gitignore file
+ 2 files changed, 153 insertions(+), 1 deletion(-)
+ create mode 100644 .gitignore
+PS C:\Users\alexa\Desktop\git-advanced> git push
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 1.59 KiB | 1.59 MiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/AL2002MI08/git-advanced-exercises.git
+   8500270..7462516  main -> main
+```
+# Challenge 7-9
+```bash
+```
 
 
