@@ -1,4 +1,65 @@
-## Git advanced 
+## Git advanced
+#  Exericise 1 Part 1 
+```bash
+PS C:\Users\alexa\Desktop\git-advanced> touch test{1..4}.md
+PS C:\Users\alexa\Desktop\git-advanced>git add test1.md && git commit -m "chore: Create initial file"
+PS C:\Users\alexa\Desktop\git-advanced>git add test2.md && git commit -m "chore: Create another file"
+PS C:\Users\alexa\Desktop\git-advanced>git add test3.md && git commit -m "chore: Create third and fourth files"
+PS C:\Users\alexa\Desktop\git-advanced>git status
+PS C:\Users\alexa\Desktop\git-advanced>git log
+PS C:\Users\alexa\Desktop\git-advanced>git add test4.md
+PS C:\Users\alexa\Desktop\git-advanced>git commit -m "chore: Create fourth file"
+PS C:\Users\alexa\Desktop\git-advanced>git rebase -i HEAD~3
+PS C:\Users\alexa\Desktop\git-advanced>git commit --amend
+PS C:\Users\alexa\Desktop\git-advanced>git rebase --abort
+PS C:\Users\alexa\Desktop\git-advanced>git rebase HEAD~4
+PS C:\Users\alexa\Desktop\git-advanced>git log
+commit 4dd186af13a645bc960292f88c51632cba00556f
+Author: AL2002MI08 <alexandramizero@gmail.com>
+Date:   Mon May 20 17:17:19 2024 +0200
+
+    chore: Combine first/second file
+
+commit 2b44d7283b4a715b5bc1d61e3e3e5df64c69968e
+Author: AL2002MI08 <alexandramizero@gmail.com>
+Date:   Mon May 20 16:45:39 2024 +0200
+PS C:\Users\alexa\Desktop\git-advanced>git add .
+PS C:\Users\alexa\Desktop\git-advanced>git commit  -m "chore: fifth and sixth file"
+PS C:\Users\alexa\Desktop\git-advanced>git rebase -i HEAD~1
+PS C:\Users\alexa\Desktop\git-advanced>git reset HEAD^
+PS C:\Users\alexa\Desktop\git-advanced>git add .
+PS C:\Users\alexa\Desktop\git-advanced>git commit -m "Create fifth file"
+PS C:\Users\alexa\Desktop\git-advanced>git commit -m "Create sixth file"
+PS C:\Users\alexa\Desktop\git-advanced>git add unwanted.txt
+PS C:\Users\alexa\Desktop\git-advanced>git commit -m "Unwanted commit"
+PS C:\Users\alexa\Desktop\git-advanced>git rebase -i HEAD~1
+PS C:\Users\alexa\Desktop\git-advanced>git reset --hard 9f6bfcb279dbf52f8dc336c848ea275cf1518078
+PS C:\Users\alexa\Desktop\git-advanced>git rebase --continue
+PS C:\Users\alexa\Desktop\git-advanced>git rebase -i HEAD~3
+PS C:\Users\alexa\Desktop\git-advanced>git checkout -b ft/branch
+PS C:\Users\alexa\Desktop\git-advanced>git add test7.md
+PS C:\Users\alexa\Desktop\git-advanced>git commit -m "Implemented test 7"
+PS C:\Users\alexa\Desktop\git-advanced>git log ft/branch
+PS C:\Users\alexa\Desktop\git-advanced>git checkout main
+PS C:\Users\alexa\Desktop\git-advanced>git cherry-pick 68cde5f18631945f12e6ed5ddaf091745e094931
+PS C:\Users\alexa\Desktop\git-advanced>git cherry-pick --abort
+PS C:\Users\alexa\Desktop\git-advanced>git log --graph
+``` 
+# Exercise 1 Part 2 1-5
+```bash
+PS C:\Users\alexa\Desktop\git-advanced>git checkout -b ft/new-feature
+PS C:\Users\alexa\Desktop\git-advanced> touch feature.txt
+PS C:\Users\alexa\Desktop\git-advanced> git add .
+PS C:\Users\alexa\Desktop\git-advanced> git commit -m "Implemented core functionality for new feature"
+PS C:\Users\alexa\Desktop\git-advanced> git checkout main
+PS C:\Users\alexa\Desktop\git-advanced> touch readme.txt
+PS C:\Users\alexa\Desktop\git-advanced> git add .
+PS C:\Users\alexa\Desktop\git-advanced> git commit -m "Updated project readme"
+PS C:\Users\alexa\Desktop\git-advanced> git push origin main
+PS C:\Users\alexa\Desktop\git-advanced> git merge ft/new-feature
+PS C:\Users\alexa\Desktop\git-advanced> git branch -d ft/new-feature
+
+```
 # Exercise 1 part 2 part 6
 ```bash
  git checkout -b ft/new-branch-from-commit  320a956d153d65b9fe35d8c62568ac01eb48d874
