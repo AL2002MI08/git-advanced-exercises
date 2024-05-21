@@ -1,0 +1,5 @@
+`This file contains the main features of advanced JavaScript these include the following
+arrow functions
+let and const 
+rest operator
+spread opearator`
