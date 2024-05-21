@@ -309,3 +309,154 @@ remote: Resolving deltas: 100% (3/3), completed with 1 local object.
 To https://github.com/AL2002MI08/git-advanced-exercises.git
    c5108f0..cfe080d  main -> main
 ```
+
+## Part 3
+# 1.
+```bash
+PS C:\Users\alexa\Desktop\git-advanced> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\alexa\Desktop\git-advanced> git add .
+PS C:\Users\alexa\Desktop\git-advanced> git stash
+Saved working directory and index state WIP on main: cfe080d modified Readme file
+PS C:\Users\alexa\Desktop\git-advanced> git stash list
+stash@{0}: WIP on main: cfe080d modified Readme file
+PS C:\Users\alexa\Desktop\git-advanced> git stash pop
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (c9f27ed0f2d652650c70e608c881d4873ce427d0)
+PS C:\Users\alexa\Desktop\git-advanced> git branch
+  ft/branch
+  ft/improved-branch-menu
+* main
+PS C:\Users\alexa\Desktop\git-advanced> git commit -m "Added changes to html file"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\alexa\Desktop\git-advanced> git add .     
+PS C:\Users\alexa\Desktop\git-advanced> git commit -m "Added changes to html file"
+[main 54864c1] Added changes to html file
+ 2 files changed, 29 insertions(+)
+ ```
+ # Challenge 2,3,4
+ ```bash
+ PS C:\Users\alexa\Desktop\git-advanced> git checkout -b ft/new-feature 
+Switched to a new branch 'ft/new-feature'
+PS C:\Users\alexa\Desktop\git-advanced> git add .
+PS C:\Users\alexa\Desktop\git-advanced> git commit -m "added new file"
+[ft/new-feature ccd2a8b] added new file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 index.js
+PS C:\Users\alexa\Desktop\git-advanced> git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 5 commits.
+  (use "git push" to publish your local commits)
+PS C:\Users\alexa\Desktop\git-advanced> git add .
+PS C:\Users\alexa\Desktop\git-advanced> git commit -m "added new changes"
+[main fce2268] added new changes
+ 1 file changed, 1 insertion(+)
+ create mode 100644 index.js
+PS C:\Users\alexa\Desktop\git-advanced> git merge ft/new-feature
+Auto-merging index.js
+CONFLICT (add/add): Merge conflict in index.js
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\alexa\Desktop\git-advanced> git status
+On branch main
+Your branch is ahead of 'origin/main' by 6 commits.
+  (use "git push" to publish your local commits)
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   index.js
+
+PS C:\Users\alexa\Desktop\git-advanced> git commit -m "Merged conflicts in index js file"
+[main a1582cd] Merged conflicts in index js file
+PS C:\Users\alexa\Desktop\git-advanced> git merge tool
+merge: tool - not something we can merge
+PS C:\Users\alexa\Desktop\git-advanced> git checkout ft/new-feature
+error: Your local changes to the following files would be overwritten by checkout:
+        index.js
+Please commit your changes or stash them before you switch branches.
+Aborting
+PS C:\Users\alexa\Desktop\git-advanced> git add .
+PS C:\Users\alexa\Desktop\git-advanced> git commit -m "Modified index js"                
+[main f6aa74b] Modified index js
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+PS C:\Users\alexa\Desktop\git-advanced> git checkout main
+Already on 'main'
+Your branch is ahead of 'origin/main' by 9 commits.
+  (use "git push" to publish your local commits)
+PS C:\Users\alexa\Desktop\git-advanced> git mergetool
+
+This message is displayed because 'merge.tool' is not configured.
+See 'git mergetool --tool-help' or 'git help config' for more details.
+'git mergetool' will now attempt to use one of the following tools:
+tortoisemerge emerge vimdiff nvimdiff
+No files need merging
+PS C:\Users\alexa\Desktop\git-advanced> git merge ft/new-feature
+Already up to date.
+PS C:\Users\alexa\Desktop\git-advanced> git add .
+PS C:\Users\alexa\Desktop\git-advanced> git commit -m "Modified index js"
+[main 9f6bfcb] Modified index js
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+PS C:\Users\alexa\Desktop\git-advanced> git merge ft/new-feature
+Already up to date.
+PS C:\Users\alexa\Desktop\git-advanced> git add .
+PS C:\Users\alexa\Desktop\git-advanced> git commit -m "Added new changes index js"
+[main 82200de] Added new changes index js
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+PS C:\Users\alexa\Desktop\git-advanced> git checkout ft/new-feature
+Switched to branch 'ft/new-feature'
+PS C:\Users\alexa\Desktop\git-advanced> git add .
+PS C:\Users\alexa\Desktop\git-advanced> git commit -m "Added few other changes index js"
+[ft/new-feature 5f0e556] Added few other changes index js
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+PS C:\Users\alexa\Desktop\git-advanced> git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 11 commits.
+  (use "git push" to publish your local commits)
+PS C:\Users\alexa\Desktop\git-advanced> git merge ft/new-feature
+Auto-merging index.js
+CONFLICT (content): Merge conflict in index.js
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\alexa\Desktop\git-advanced> git add .
+PS C:\Users\alexa\Desktop\git-advanced> git commit -m "Resolved conflicts using mergetool"
+[main 8500270] Resolved conflicts using mergetool
+PS C:\Users\alexa\Desktop\git-advanced> git push
+Enumerating objects: 42, done.
+Counting objects: 100% (42/42), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (36/36), done.
+Writing objects: 100% (38/38), 4.02 KiB | 1.00 MiB/s, done.
+Total 38 (delta 22), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (22/22), completed with 3 local objects.
+To https://github.com/AL2002MI08/git-advanced-exercises.git
+   cfe080d..8500270  main -> main
+ ```
+
+
