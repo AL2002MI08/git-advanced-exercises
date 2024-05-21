@@ -478,6 +478,51 @@ To https://github.com/AL2002MI08/git-advanced-exercises.git
 ```
 # Challenge 7-9
 ```bash
+PS C:\Users\alexa\Desktop\git-advanced> git tag v1.0
+PS C:\Users\alexa\Desktop\git-advanced> git tag
+v1.0
+PS C:\Users\alexa\Desktop\git-advanced> git push origin v1.0
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/AL2002MI08/git-advanced-exercises.git
+ * [new tag]         v1.0 -> v1.0
+PS C:\Users\alexa\Desktop\git-advanced> git tag v1.1
+PS C:\Users\alexa\Desktop\git-advanced> git tag
+v1.0
+v1.1
+PS C:\Users\alexa\Desktop\git-advanced> git push origin v1.1
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/AL2002MI08/git-advanced-exercises.git
+ * [new tag]         v1.1 -> v1.1
+PS C:\Users\alexa\Desktop\git-advanced> git tag
+v1.0
+v1.1
+PS C:\Users\alexa\Desktop\git-advanced> git tag -d v1.1
+Deleted tag 'v1.1' (was 7462516)
+PS C:\Users\alexa\Desktop\git-advanced> git status    
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\alexa\Desktop\git-advanced>                 
+PS C:\Users\alexa\Desktop\git-advanced> git add .
+PS C:\Users\alexa\Desktop\git-advanced> git commit -m "added tag to main"
+[main 26b5d03] added tag to main
+ 1 file changed, 21 insertions(+)
+PS C:\Users\alexa\Desktop\git-advanced> git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 533 bytes | 533.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/AL2002MI08/git-advanced-exercises.git
+   7462516..26b5d03  main -> main
 ```
 
 
