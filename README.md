@@ -476,7 +476,7 @@ remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/AL2002MI08/git-advanced-exercises.git
    8500270..7462516  main -> main
 ```
-# Challenge 7-9
+# Challenge 7-10
 ```bash
 PS C:\Users\alexa\Desktop\git-advanced> git tag v1.0
 PS C:\Users\alexa\Desktop\git-advanced> git tag
@@ -523,6 +523,19 @@ Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
 remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/AL2002MI08/git-advanced-exercises.git
    7462516..26b5d03  main -> main
+PS C:\Users\alexa\Desktop\git-advanced> git pull origin main
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 950 bytes | 79.00 KiB/s, done.
+From https://github.com/AL2002MI08/git-advanced-exercises
+ * branch            main       -> FETCH_HEAD
+   a46811b..28c314c  main       -> origin/main
+Updating a46811b..28c314c
+Fast-forward
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 ```
 
 
