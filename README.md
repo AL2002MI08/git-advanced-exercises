@@ -283,4 +283,29 @@ PS C:\Users\alexa\Desktop\git-advanced> git branch
   ft/branch
   ft/improved-branch-menu
 * main
+PS C:\Users\alexa\Desktop\git-advanced> git status
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\alexa\Desktop\git-advanced> git add . 
+PS C:\Users\alexa\Desktop\git-advanced> git commit -m "modified Readme file"
+[main cfe080d] modified Readme file
+ 1 file changed, 286 insertions(+), 1 deletion(-)
+PS C:\Users\alexa\Desktop\git-advanced> git push
+Enumerating objects: 12, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 3.62 KiB | 1.81 MiB/s, done.
+Total 8 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+To https://github.com/AL2002MI08/git-advanced-exercises.git
+   c5108f0..cfe080d  main -> main
 ```
