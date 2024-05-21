@@ -355,7 +355,7 @@ Changes not staged for commit:
         modified:   README.md
         modified:   index.html
 
-no changes added to commit (use "git add" and/or "git commit -a")
+
 PS C:\Users\alexa\Desktop\git-advanced> git add .     
 PS C:\Users\alexa\Desktop\git-advanced> git commit -m "Added changes to html file"
 [main 54864c1] Added changes to html file
